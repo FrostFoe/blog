@@ -1,5 +1,5 @@
 {
-  "name": "blog_app",
+  "name": "blog-app",
   "version": "4.8.0",
   "scripts": {
     "dev": "astro dev",
