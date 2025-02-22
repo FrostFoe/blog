@@ -11,7 +11,7 @@ export default defineConfig({
   site: SITE.website,
   devToolbar: {
     enabled: false,
-  }, // Fixed missing comma here
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false,
