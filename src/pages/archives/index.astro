@@ -13,8 +13,7 @@ if (!SITE.showArchives) {
   return Astro.redirect("/404");
 }
 
-// Fetch all posts, including drafts
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", ({ data }) => !data.draft);
 
 const MonthMap: Record<string, string> = {
   "1": "January",
