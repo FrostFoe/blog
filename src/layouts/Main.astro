@@ -1,6 +1,10 @@
 ---
+import { getCollection } from "astro:content";
 import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Card from "@components/Card";
+import { SITE } from "@config";
 
+const posts = await getCollection("blog", ({ data }) => !data.draft);
 interface StringTitleProp {
   pageTitle: string;
   pageDesc?: string;
@@ -32,7 +36,17 @@ const { props } = Astro;
     )
   }
   <p>{props.pageDesc}</p>
-  <slot />
+
+  <!-- Render All Posts -->
+  <ul>
+    {
+      posts.map(({ data, slug }) => (
+        <li>
+          <Card href={`/posts/${slug}/`} frontmatter={data} />
+        </li>
+      ))
+    }
+  </ul>
 </main>
 
 <style>
