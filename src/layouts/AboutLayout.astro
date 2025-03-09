@@ -20,20 +20,21 @@ const { frontmatter } = Astro.props;
   <Breadcrumbs />
   <main id="main-content">
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
-      <link
-        href="https://fonts.maateen.me/kalpurush/font.css"
-        rel="stylesheet"
-      />
       <style>
+        @font-face {
+          font-family: 'BnFont';
+          src: url('/fonts/bn-font.ttf') format('truetype');
+        }
+
         body {
-          font-family: "Kalpurush", sans-serif;
+          font-family: 'BnFont', sans-serif;
         }
 
         h1,
         h2,
         h3,
         p {
-          font-family: "Kalpurush", sans-serif;
+          font-family: 'BnFont', sans-serif;
         }
       </style>
       <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>

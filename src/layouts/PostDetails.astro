@@ -61,7 +61,6 @@ const nextPost =
 
 <Layout {...layoutProps}>
   <Header />
-  <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet" />
   <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
@@ -177,21 +176,30 @@ const nextPost =
 </Layout>
 
 <style>
+  @font-face {
+    font-family: "BNFont";
+    src: url("/fonts/bn-font.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
   article,
   h1,
   h2,
   h3,
   p {
-    font-family: "Kalpurush", sans-serif;
+    font-family: "BNFont", "Kalpurush", sans-serif;
   }
 
   main {
     @apply mx-auto w-full max-w-3xl px-4 pb-12;
   }
+  
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
   }
 </style>
+
 
 <script is:inline data-astro-rerun>
   function createProgressBar() {
