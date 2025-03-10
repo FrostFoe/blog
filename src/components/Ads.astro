@@ -17,17 +17,19 @@ const { autoplay = true, muted = true, loop = true } = Astro.props;
 </style>
 
 <div class="flex flex-col justify-center items-center p-4">
-  <video
-    class="w-full max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl"
-    autoplay={autoplay}
-    muted={muted}
-    loop={loop}
-    playsinline
-  >
-    <source src="/sys_ad.mp4" type="video/mp4">
-  </video>
+  <a href="https://t.me/systemadminbd" target="_blank" rel="noopener noreferrer"> <!-- Added link here -->
+    <video
+      class="w-full max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl"
+      autoplay={autoplay}
+      muted={muted}
+      loop={loop}
+      playsinline
+    >
+      <source src="/sys_ad.mp4" type="video/mp4">
+    </video>
+  </a>
 
-  <p class="mt-4 text-sm text-gray-600 text-center bn-font"> <!-- Applied custom font here -->
+  <p class="mt-4 text-sm text-gray-600 text-center bn-font">
     Interested in advertising with us? Contact us at <a href="mailto:frostfoe@gmail.com" class="text-blue-500 hover:underline">frostfoe@gmail.com</a>.
   </p>
 </div>
