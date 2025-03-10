@@ -1,0 +1,9 @@
+---
+// src/components/Ads.astro
+const { width = "100%", autoplay = true, muted = true, loop = true } = Astro.props;
+---
+
+<video width={width} controls {autoplay} {muted} {loop}>
+  <source src="/sys_ad.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
