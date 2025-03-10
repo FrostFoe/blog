@@ -5,7 +5,6 @@ import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
-import GoogleAd from '@components/GoogleAd.astro';
 import Ads from '@components/Ads.astro';
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
@@ -173,7 +172,6 @@ const nextPost =
       }
     </div>
      <Ads />
-     <GoogleAd />
   </main>
   <Footer />
 </Layout>
